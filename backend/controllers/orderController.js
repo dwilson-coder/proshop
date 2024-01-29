@@ -1,5 +1,5 @@
 import asyncHandler from "../middleware/asyncHandler.js";
-import Order from "../models/OrderModel.js";
+import Order from "../models/orderModel.js";
 
 // @desc    Create a new order
 // @route   POST /api/orders
@@ -65,7 +65,7 @@ const getOrderById = asyncHandler(async (req, res) => {
 // @route   PUT /api/orders/:id/pay
 // @access  Private
 const updateOrderToPaid = asyncHandler(async (req, res) => {
-  const order = await OrderfindById(req.params.id);
+  const order = await Order.findById(req.params.id);
   if (order) {
     order.isPaid = true;
     order.paidAt = Date.now();
