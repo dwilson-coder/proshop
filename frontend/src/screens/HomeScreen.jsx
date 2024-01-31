@@ -7,6 +7,7 @@ import Message from "../components/Message";
 import Loader from "../components/Loader";
 import ProductCarousel from "../components/ProductCarousel";
 import Paginate from "../components/Paginate";
+import Meta from "../components/Meta";
 import { Link } from "react-router-dom";
 
 const HomeScreen = () => {
@@ -33,6 +34,7 @@ const HomeScreen = () => {
         </Message>
       ) : (
         <>
+          <Meta />
           <h1>Latest Products</h1>
           <Row>
             {data.products.map((product) => (

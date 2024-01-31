@@ -6,6 +6,7 @@ import Message from "../../components/Message";
 import Loader from "../../components/Loader";
 import FormContainer from "../../components/FormContainer";
 import { toast } from "react-toastify";
+
 import {
   useGetUserDetailsQuery,
   useUpdateUserMutation,
@@ -54,6 +55,7 @@ const UserEditScreen = () => {
       <Link to="/admin/userlist" className="btn btn-light my-3">
         Go Back
       </Link>
+
       <FormContainer>
         <h1>Edit User</h1>
         {loadingUpdate && <Loader />}
