@@ -9,6 +9,7 @@ import {
 import { Provider } from "react-redux";
 import store from "./store";
 import "./assets/bootstrap.custom.css";
+//  import "bootstrap/dist/css/bootstrap.min.css";
 import "./assets/index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
@@ -35,7 +36,12 @@ const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />}>
       <Route index={true} path="/" element={<HomeScreen />} />
+      <Route path="/search/:keyword" element={<HomeScreen />} />
       <Route path="/page/:pageNumber" element={<HomeScreen />} />
+      <Route
+        path="/search/:keyword/page/:pageNumber"
+        element={<HomeScreen />}
+      />
       <Route path="/product/:id" element={<ProductScreen />} />
       <Route path="/cart" element={<CartScreen />} />
       <Route path="/login" element={<LoginScreen />} />
